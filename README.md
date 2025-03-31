@@ -1,1 +1,1 @@
-# TSEditor
+# TS-Editor frontend

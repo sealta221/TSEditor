@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 如果需要，可以添加一些基础的自定义样式 */
+@layer base {
+  html {
+    font-family: Inter, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+/* D3.js specific styles */
+.axis-grid line {
+  stroke: #E5E7EB;
+  stroke-width: 1;
+  stroke-dasharray: 4,4;
+}
+
+.x-axis path,
+.y-axis path {
+  stroke: none;
+}
+
+.x-axis line,
+.y-axis line {
+  stroke: #E5E7EB;
+  stroke-width: 1;
+}
+
+.x-axis text,
+.y-axis text {
+  fill: #9CA3AF;
+  font-size: 12px;
+}
+
+/* Time series view styles */
+.time-series-item {
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.time-series-item:hover {
+  background-color: #F3F4F6;
+}
+
+.time-series-tag {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.time-series-tag.original {
+  background-color: #E5E7EB;
+  color: #4B5563;
+}
+
+.time-series-tag.LF {
+  background-color: #FEF3C7;
+  color: #92400E;
+}
+
+.time-series-tag.HF {
+  background-color: #E0E7FF;
+  color: #3730A3;
+}
