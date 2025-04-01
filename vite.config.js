@@ -26,9 +26,8 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
-    // 使用publicPath而不是base
+    // 只使用 base，移除 publicPath
     base: '/TSEditor/',
-    publicPath: '/TSEditor/',
     
     build: {
       // 添加构建选项，使输出更可靠

@@ -4,6 +4,10 @@ on:
   push:
     branches: [ main ]  # 或者master，取决于您的默认分支名称
 
+# 添加权限设置
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -22,8 +26,12 @@ jobs:
       - name: Build
         run: npm run build  # 确保构建脚本已修改，或者tsconfig.json已添加
 
+      # 添加 .nojekyll 文件
+      - name: Create .nojekyll
+        run: touch dist/.nojekyll
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist  # Vite默认的构建输出目录
-          branch: deploy  # 使用您现有的deploy分支，而不是gh-pages 
+          branch: gh-pages  # 改为 gh-pages 以避免与 deploy 分支冲突 
