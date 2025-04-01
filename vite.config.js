@@ -26,8 +26,9 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
-    // 添加base，值为您的GitHub仓库名称
+    // 使用publicPath而不是base
     base: '/TSEditor/',
+    publicPath: '/TSEditor/',
     
     build: {
       // 添加构建选项，使输出更可靠
