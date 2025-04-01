@@ -1,5 +1,5 @@
 const router = createRouter({
-  history: createWebHistory('/your-repo-name/'),
+  history: createWebHistory('/TSEditor/'),
   routes: [
     // 您的路由配置
   ]

@@ -27,6 +27,6 @@ export default defineConfig(({ mode }) => {
       },
     },
     // 添加base，值为您的GitHub仓库名称
-    base: '/your-repo-name/',
+    base: '/TSEditor/',
   }
 })

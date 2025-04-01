@@ -26,4 +26,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist  # Vite默认的构建输出目录
-          branch: gh-pages  # 部署到的分支 
+          branch: deploy  # 使用您现有的deploy分支，而不是gh-pages 
