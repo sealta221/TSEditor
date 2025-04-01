@@ -1,3 +1,4 @@
+import './polyfill.js';
 import { createApp } from 'vue'
 import './index.css'
 // 引入pinia仓库
