@@ -17,10 +17,10 @@ jobs:
           node-version: 16  # 选择您需要的Node.js版本
 
       - name: Install Dependencies
-        run: npm ci  # 或 yarn install --frozen-lockfile
+        run: npm install  # 或 yarn install --frozen-lockfile
 
       - name: Build
-        run: npm run build  # 构建项目
+        run: npm run build  # 确保构建脚本已修改，或者tsconfig.json已添加
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
