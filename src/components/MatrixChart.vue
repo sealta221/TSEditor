@@ -19,11 +19,13 @@
 <script setup>
 import { ref, onMounted, onUnmounted, watch, nextTick, provide } from 'vue';
 import * as d3 from 'd3';
+import { pointer } from 'd3-selection';
 import { reqDataDay, reqDataOriginal, reqDataAllUserWeek, reqDataDayMultiple, reqDataOriginalMultiple, reqDataMix } from '@/api';
 import { useDatasetStore } from '../stores/datasetStore';
 import { ElMessage } from 'element-plus';
 import { MATRIX_CHART, THEME_COLOR, THEME_COLOR_LIGHT } from '@/utils/constants';
 
+d3.pointer = pointer; // 兼容性补丁
 
 const container = ref(null);
 const overviewChart = ref(null);
