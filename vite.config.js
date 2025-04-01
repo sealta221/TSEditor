@@ -25,6 +25,8 @@ export default defineConfig(({ mode }) => {
           // rewrite: (path) => (path.replace(/^\/api/, '')+'/api/'),
         },
       },
-    }
+    },
+    // 添加base，值为您的GitHub仓库名称
+    base: '/your-repo-name/',
   }
 })
